@@ -12,11 +12,42 @@
 [#14]: https://github.com/tsuyoshiwada/storybook-chrome-screenshot/issues/14
 [#22]: https://github.com/tsuyoshiwada/storybook-chrome-screenshot/issues/22
 [#24]: https://github.com/tsuyoshiwada/storybook-chrome-screenshot/issues/24
+[#35]: https://github.com/tsuyoshiwada/storybook-chrome-screenshot/pull/35
+
+
+## 1.0.1
+
+> 2018-03-14
+
+
+### Minor changes
+
+* Log when something is wrong. (Thanks [@kogai](https://github.com/kogai) !!)
+
+
+## 1.0.0
+
+> 2018-01-11
+
+First major release :tada:
+
+### New features
+
+* Support for Vue.js :tada: :tada:
+
+### Breaking changes
+
+* Change interface of `initScreenshot()`.
+    - Changed to function execution in order to avoid destructive change when it came to receive options as with withScreenshot in the future.
+
+### Minor changes
+
+* Change output format capture in CI environment.
 
 
 ## 0.10.0
 
-> 2018-00-00
+> 2018-01-07
 
 ### Minor changes
 

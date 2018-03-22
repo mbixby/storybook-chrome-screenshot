@@ -7,6 +7,7 @@ import { emojify } from 'node-emoji';
 import chalk from 'chalk';
 import { PhaseTypes } from '../constants';
 import { CLIOptions } from '../../models/options';
+import inspect = require('util-inspect');
 import StoryStore from './StoryStore';
 import Terminal from './Terminal';
 import Server from './Server';
@@ -42,7 +43,7 @@ export default class App {
   public async validate() {
     const { cmd, cwd, configDir } = this.options;
 
-    this.terminal.log('CLI Options', this.options);
+    this.terminal.log('CLI Options', inspect(this.options));
 
     if (!fs.existsSync(cmd)) {
       this.terminal.error(`Storybook does not exists. First, let's setup a Storybook!
@@ -145,7 +146,10 @@ export default class App {
     await this.terminate();
   }
 
-  public async terminate() {
+  public async terminate(e?: Error) {
+    if (e) {
+      this.terminal.error(`An unexpected error occurred, Please make sure message below\n${e}`);
+    }
     this.server.stop();
     await this.browser.close();
   }
