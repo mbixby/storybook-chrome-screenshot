@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tsuyoshiwada/storybook-chrome-screenshot.git"
+    "url": "git+https://github.com/mbixby/storybook-chrome-screenshot.git"
   },
   "author": "tsuyoshiwada",
   "license": "MIT",
